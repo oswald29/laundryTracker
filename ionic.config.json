@@ -1,0 +1,7 @@
+{
+  "name": "laudryTracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
