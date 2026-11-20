@@ -10,20 +10,20 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
+@import '@ionic/angular/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
-@import "@ionic/angular/css/typography.css";
-@import "@ionic/angular/css/display.css";
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
+@import '@ionic/angular/css/padding.css';
+@import '@ionic/angular/css/float-elements.css';
+@import '@ionic/angular/css/text-alignment.css';
+@import '@ionic/angular/css/text-transformation.css';
+@import '@ionic/angular/css/flex-utils.css';
 
 /**
  * Ionic Dark Mode
@@ -34,4 +34,528 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+
+:root {
+  --ink: #1d2b3a;
+  --muted: #788493;
+  --line: #e8edf2;
+  --surface: #fff;
+  --page: #f6f8fb;
+}
+
+app-home ion-content {
+  --background: var(--page);
+}
+ion-toolbar {
+  --background: var(--surface);
+  --border-color: var(--line);
+  --padding-start: max(20px, calc((100% - 1120px) / 2));
+  --padding-end: max(20px, calc((100% - 1120px) / 2));
+}
+ion-title {
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+.brand-mark {
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  color: #fff;
+  background: #3478dc;
+  border-radius: 10px;
+  place-items: center;
+  vertical-align: middle;
+}
+.brand-mark ion-icon {
+  font-size: 19px;
+}
+.new-order-button {
+  --background: #3478dc;
+  --color: #fff;
+  --border-radius: 11px;
+  height: 40px;
+  font-weight: 650;
+}
+.dashboard {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 38px 24px 64px;
+  color: var(--ink);
+}
+.welcome-row,
+.section-heading,
+.order-card-top,
+.order-card-bottom,
+.stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.welcome-row {
+  margin-bottom: 27px;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: #718096;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 7px;
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 750;
+  letter-spacing: -1.1px;
+}
+.welcome-copy {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.today-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  color: #5e6b7b;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 12px;
+}
+.today-pill ion-icon {
+  color: #3478dc;
+  font-size: 17px;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.stat-card,
+.order-card,
+.empty-card,
+.error-card {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 4px 14px #253c5510;
+}
+.stat-card ion-card-content {
+  padding: 19px 20px 17px;
+}
+.stat-top {
+  color: #647184;
+  font-size: 12px;
+  font-weight: 600;
+}
+.stat-top ion-icon {
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.stat-card strong {
+  display: block;
+  margin: 10px 0 3px;
+  color: var(--ink);
+  font-size: 26px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+.stat-card small {
+  color: #8a95a2;
+  font-size: 11px;
+}
+.stat-blue .stat-top ion-icon {
+  color: #3478dc;
+  background: #eaf2ff;
+}
+.stat-orange .stat-top ion-icon {
+  color: #df8b32;
+  background: #fff3e5;
+}
+.stat-green .stat-top ion-icon {
+  color: #279a73;
+  background: #e8f7f1;
+}
+.error-card {
+  margin-top: 18px;
+}
+.error-card ion-card-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.error-card > ion-card-content > ion-icon {
+  color: #d65050;
+  font-size: 23px;
+}
+.error-card div {
+  flex: 1;
+}
+.error-card strong {
+  font-size: 13px;
+}
+.error-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.orders-section {
+  margin-top: 38px;
+}
+.section-heading {
+  align-items: flex-end;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 730;
+  letter-spacing: -0.5px;
+}
+h2 span {
+  margin-left: 5px;
+  color: #8b97a5;
+  font-size: 13px;
+  font-weight: 500;
+}
+.section-heading .eyebrow {
+  margin-bottom: 6px;
+}
+.order-filters {
+  width: max-content;
+  max-width: 100%;
+  margin-bottom: 17px;
+  --background: transparent;
+}
+.order-filters ion-segment-button {
+  min-height: 36px;
+  --border-radius: 9px;
+  --color: #758192;
+  --color-checked: #2867cc;
+  --indicator-color: #eaf2ff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.order-card ion-card-content {
+  padding: 17px;
+}
+.order-card-top {
+  gap: 11px;
+}
+.customer-avatar {
+  display: grid;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  color: #2f65b5;
+  font-size: 12px;
+  font-weight: 750;
+  place-items: center;
+}
+.avatar-blue {
+  background: #e8f0ff;
+  color: #2f65b5;
+}
+.avatar-green {
+  background: #e5f6ee;
+  color: #278562;
+}
+.avatar-orange {
+  background: #fff0df;
+  color: #c97b28;
+}
+.avatar-purple {
+  background: #f0eaff;
+  color: #7956bd;
+}
+.customer-info {
+  min-width: 0;
+  flex: 1;
+}
+.customer-info h3 {
+  overflow: hidden;
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.customer-info p {
+  margin: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.customer-info p span {
+  padding: 0 3px;
+}
+.status-chip {
+  min-height: 25px;
+  margin: 0;
+  padding: 0 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 650;
+}
+.status-dot {
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status-received {
+  color: #4479c8;
+  background: #edf4ff;
+}
+.status-washing {
+  color: #b87924;
+  background: #fff5e7;
+}
+.status-ready {
+  color: #268968;
+  background: #e8f7f1;
+}
+.status-completed {
+  color: #727d8a;
+  background: #f0f2f5;
+}
+.order-details {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr;
+  gap: 10px;
+  margin: 17px 0 14px;
+  padding: 13px 0;
+  border-top: 1px solid #eff2f5;
+  border-bottom: 1px solid #eff2f5;
+}
+.order-details div {
+  display: grid;
+  gap: 5px;
+}
+.detail-label {
+  color: #98a2ae;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.order-details strong {
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-card-bottom {
+  gap: 8px;
+}
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #778393;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.due-date ion-icon {
+  font-size: 14px;
+}
+.order-actions {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.order-actions ion-button {
+  min-height: 32px;
+  margin: 0;
+  --padding-start: 7px;
+  --padding-end: 7px;
+}
+.order-actions ion-button ion-icon {
+  font-size: 17px;
+}
+.advance-button {
+  --background: #edf4ff;
+  --color: #2867cc;
+  --border-radius: 8px;
+  font-size: 10px;
+  font-weight: 650;
+}
+.loading-state {
+  display: grid;
+  min-height: 180px;
+  color: #738092;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+}
+.loading-state p {
+  margin: 0;
+  font-size: 12px;
+}
+.empty-card {
+  text-align: center;
+}
+.empty-card ion-card-content {
+  padding: 35px 20px;
+}
+.empty-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 13px;
+  color: #3478dc;
+  background: #eaf2ff;
+  border-radius: 16px;
+  font-size: 25px;
+  place-items: center;
+}
+.empty-card h3 {
+  margin-bottom: 7px;
+  font-size: 16px;
+}
+.empty-card p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.empty-card ion-button {
+  --border-radius: 9px;
+  font-size: 12px;
+}
+.order-form {
+  display: grid;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+.form-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.order-form ion-input,
+.order-form ion-select {
+  --background: #fff;
+  --border-radius: 10px;
+  font-size: 13px;
+}
+.price-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f1f6ff;
+  border-radius: 12px;
+}
+.price-summary div {
+  display: grid;
+  gap: 5px;
+}
+.price-summary span {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 650;
+}
+.price-summary small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.price-summary strong {
+  color: #2867cc;
+  font-size: 18px;
+}
+.save-button {
+  margin-top: 3px;
+  --background: #3478dc;
+  --border-radius: 10px;
+  font-weight: 650;
+}
+
+@media (max-width: 700px) {
+  ion-toolbar {
+    --padding-start: 13px;
+    --padding-end: 13px;
+  }
+  .dashboard {
+    padding: 25px 14px 40px;
+  }
+  .welcome-row {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .today-pill {
+    padding: 8px;
+    font-size: 0;
+  }
+  .today-pill ion-icon {
+    font-size: 19px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+  .stat-card:last-child {
+    grid-column: span 2;
+  }
+  .stat-card ion-card-content {
+    padding: 14px;
+  }
+  .stat-card strong {
+    font-size: 22px;
+  }
+  .order-filters {
+    width: 100%;
+  }
+  .order-filters ion-segment-button {
+    min-width: 0;
+    padding: 0 5px;
+    font-size: 10px;
+  }
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 390px) {
+  .new-order-button {
+    font-size: 11px;
+  }
+  .new-order-button ion-icon {
+    margin-right: 3px;
+  }
+  .order-card ion-card-content {
+    padding: 14px 12px;
+  }
+  .status-chip {
+    padding: 0 7px;
+    font-size: 9px;
+  }
+  .order-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .order-actions {
+    align-self: flex-end;
+  }
+}

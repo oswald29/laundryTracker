@@ -1,0 +1,97 @@
+:host {
+  display: block;
+}
+
+.login-layout {
+  display: grid;
+  min-height: 100%;
+  padding: 24px;
+  place-items: center;
+  background: radial-gradient(circle at 15% 15%, #e8f0ff 0, transparent 30%), var(--page);
+}
+
+.login-card {
+  width: min(440px, 100%);
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 16px 48px #253c5514;
+}
+
+.login-card ion-card-content {
+  padding: 36px;
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 38px;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.login-card .eyebrow {
+  margin-bottom: 8px;
+}
+
+.login-card h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.login-description {
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+}
+
+.login-form ion-button {
+  --background: #3478dc;
+  --border-radius: 11px;
+  height: 46px;
+  margin-top: 4px;
+  font-weight: 650;
+}
+
+.mode-switch {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.mode-switch button {
+  padding: 0 0 0 4px;
+  color: #2867cc;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.auth-notice {
+  margin: 22px 0 0;
+  padding: 12px;
+  color: #80621f;
+  background: #fff8e8;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .login-layout {
+    padding: 16px;
+  }
+
+  .login-card ion-card-content {
+    padding: 26px 22px;
+  }
+}
